@@ -1,0 +1,47 @@
+.Card
+	margin: 1%
+	width: 265px
+	max-width: 40vw
+	border-radius: 24px
+	background: $accent
+
+	&:not(.CardMini)
+		cursor: pointer
+
+	&:hover:not(.CardMini)
+		background: green
+
+	&.CardMini
+		width: 150px
+		position: relative
+		.number
+			position: absolute
+			top: 8px
+			left: 8px
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			background: #222
+			color: #fff
+			display: flex
+			justify-content: center
+			align-items: center
+			z-index: 1
+
+	img
+		box-sizing: border-box
+		width: 100%
+		padding: 8px
+		border-radius: 24px
+
+	.card-info
+		height: 75px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-style: italic
+		font-size: 1.2rem
+		font-weight: 600
+		color: $darkest
+		span
+			margin-bottom: 10px

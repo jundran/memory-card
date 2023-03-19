@@ -1,0 +1,25 @@
+.Header
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	p
+		font-size: 1.2rem
+		font-weight: 500
+		margin: 0 32px 16px 32px
+		text-align: justify
+
+	.score
+		margin: 12px
+		span
+			margin: 0 32px
+			padding: 8px
+			border: 1px dotted #fff
+
+@media (max-width: 500px)
+	.Header
+		.score
+			border: 1px dotted #fff
+			span
+				display: block
+				border: none
