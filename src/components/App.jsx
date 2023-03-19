@@ -35,7 +35,7 @@ export default function App () {
 	}
 
 	function handleClick (clickedCard) {
-		new Audio('/sounds/beep.mp3').play()
+		new Audio('/memory-card/sounds/beep.mp3').play()
 		setCardsHistory([...cardsHistory, clickedCard])
 
 		// Lose < 12 unique
