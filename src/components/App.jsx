@@ -36,7 +36,7 @@ export default function App () {
 	}
 
 	function handleClick (clickedCard) {
-		beep.currentTime = 0.15
+		beep.currentTime = 0
 		beep.play()
 		setCardsHistory([...cardsHistory, clickedCard])
 
