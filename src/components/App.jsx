@@ -5,6 +5,7 @@ import Card from './Card'
 import ScoreScreen from './ScoreScreen'
 import getCardData from '../data'
 const orderedCards = getCardData()
+const beep = new Audio('/memory-card/sounds/beep.mp3')
 
 export default function App () {
 	const [score, setScore] = useState(0)
@@ -35,13 +36,14 @@ export default function App () {
 	}
 
 	function handleClick (clickedCard) {
-		new Audio('/memory-card/sounds/beep.mp3').play()
+		beep.currentTime = 0.15
+		beep.play()
 		setCardsHistory([...cardsHistory, clickedCard])
 
 		// Lose < 12 unique
 		if (cardsHistory.find(card => card.name === clickedCard.name)) return handleGameOver()
 
-		setScore(score + 1) // Updates next render
+		setScore(score + 1) // Updates on next render
 		if (score === 11) handleGameOver() // Win 12 unique cards
 		else shuffleCards() // Next round
 	}

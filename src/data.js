@@ -3,7 +3,7 @@ const characters = [
 	'alligator',
 	'astronaut',
 	'cat',
-	'chicken',
+	'rooster',
 	'dinosaur',
 	'dragon',
 	'koala',

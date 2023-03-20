@@ -5,11 +5,11 @@ export default function ScoreScreen ({ score, bestScore, cardsHistory, onClick }
 	else if (score === bestScore) message += ' This is your best so far. Can you get all 12?'
 
 	return (
-		<div className="ScoreScreen">
+		<section className="ScoreScreen">
 			<p>Game over. You scored <span className='score'>{score}</span> out of 12. {message}</p>
 			<CardsSummary cardsHistory={cardsHistory} />
 			<button onClick={onClick}>Play Again</button>
-		</div>
+		</section>
 	)
 }
 
